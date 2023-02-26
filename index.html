@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İncredible Hulk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html"> <img id="img_logo" src="images/smash.png" alt=""></a>
+            <ul>
+                <li><a href="https://www.imdb.com/title/tt0286716/">Hulk</a> </li>
+                <li><a href="https://www.imdb.com/title/tt0800080/">The Incredible Hulk</a> </li>
+                <li class="last"><a href="https://www.imdb.com/title/tt0077031/">Hulk Series</a> </li>
+
+            </ul>
+        </nav>
+    </header>
+
+
+    <div id="top_div">
+        <h1 id="h1">" I am always angry "</h1>
+        <img id="Hulk1" src="/images/Hulk1_dark.jpg" alt="">
+        <p>Exposed to heavy doses of gamma radiation, scientist <span>Bruce Banner</span> transforms into the mean,
+            green
+            rage
+            machine called the <a href="#"><span id="spanHulk" title="Don't make me angry"
+                    onclick="Angry(),setTimeout(notAngry,3000),myFunction()">Hulk</span></a> </p>
+    </div>
+
+    <div id="bottom_div">
+
+        <img id="Hulk2" src="/images/Hulk2_dark.jpg" alt="">
+        <footer>
+            <p>Created by <a href="https://github.com/Harunyldz">HarunYldz</a></p>
+
+        </footer>
+    </div>
+
+
+    <script>
+        function Angry() {
+            document.getElementById('h1').style.color = '#d40000';
+            document.getElementById('h1').style.fontSize = '72px';
+
+            var x = window.matchMedia("(max-width: 768px)")
+            myFunction(x)
+            x.addListener(myFunction)
+
+            function myFunction(x) {
+                if (x.matches) {
+                    document.getElementById('h1').style.fontSize = '34px';
+                } else {
+                    document.getElementById('h1').style.fontSize = '72px';
+                }
+            }
+        }
+        function notAngry() {
+            document.getElementById('h1').style.color = '#65bc47';
+
+            var x = window.matchMedia("(max-width: 768px)")
+            myFunction(x)
+            x.addListener(myFunction)
+
+            function myFunction(x) {
+                if (x.matches) {
+                    document.getElementById('h1').style.fontSize = '28px';
+                } else {
+                    document.getElementById('h1').style.fontSize = '60px';
+                }
+            }
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
